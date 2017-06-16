@@ -20,6 +20,11 @@ atom-panel, .tool-panel {
     border-top: 1px solid @tool-panel-border-color;
     box-shadow: inset 0 1px 0 @background-color-highlight;
   }
+  &.header.panel-header .title-bar {
+    border: none;
+    background-color: @title-bar-background-color;
+    color: @title-bar-color;
+  }
 
   &.left, &.panel-left {
     border-right: 1px solid @tool-panel-border-color;
@@ -32,7 +37,12 @@ atom-panel, .tool-panel {
 
 .inset-panel {
   position: relative;
-  background-color: @inset-panel-background-color;
+  /* background-color: @inset-panel-background-color; */
+  background-image: -webkit-linear-gradient(bottom, @title-bar-background-color, @title-bar-background-color);
+  &.tab {
+    background-color: @title-bar-background-color;
+
+  }
 }
 
 .is-blurred {
@@ -44,11 +54,11 @@ atom-panel, .tool-panel {
 .panel-heading {
   .text(normal);
 
-  border-bottom: 1px solid @panel-heading-border-color;
+  /* border-bottom: 1px solid @panel-heading-border-color; */
   border-top: 1px solid fadein(@background-color-highlight, 10%);
 
   background-color: transparent;
-  background-image: -webkit-linear-gradient(@panel-heading-background-color, darken(@panel-heading-background-color, 10%));
+  /* background-image: -webkit-linear-gradient(@panel-heading-background-color, darken(@panel-heading-background-color, 10%)); */
 
   .btn {
     padding-left: 8px;
